@@ -1,7 +1,6 @@
 public class x2 {
 	public static void main(String[] args) {
 		int c = 0;
-		int x = 1;
 		int n0 = 0;
 		int n1 = 2;
 		int n2 = 1;
