@@ -1,15 +1,14 @@
 public class x10 {
     public static void main(String[] args) {
-        int n = 0;
+        Long n = 0L;
 
-        boolean re = true;
-        for (int x = 1; x < 2000000; x += 2) {
-            inner: for (int z = 2; z <= x / 2; z++) {
-                if (x % z == 0 && z != x) {
-                    break inner;
-                } else if (z == x) {
-                    
+        for (Long x = 1L; x < 2000000; x += 2) {
+            inner: for (Long z = 1L; z <= x; z++) {
+                if (z.equals(x)) {
+                    n += x;
                     System.out.println(x);
+                } else if (x % z == 0) {
+                    break inner;
                 }
             }
         }
@@ -17,8 +16,7 @@ public class x10 {
     }
 }
 /*
- * By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see
- * that the 6th prime is 13.
+ * The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
  * 
- * What is the 10 001st prime number?
+ * Find the sum of all the primes below two million.
  */

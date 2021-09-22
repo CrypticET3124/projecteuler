@@ -6,11 +6,11 @@ public class x7 {
         boolean re = true;
         for (int x = 7; re; x += 2) {
             inner: for (int z = 2; z <= x; z++) {
-                if (x % z == 0 && z != x) {
-                    break inner;
-                } else if (z == x) {
+                if (z == x) {
                     p++;
                     System.out.println(p);
+                } else if (x % z == 0) {
+                    break inner;
                 }
             }
             if (p == 10001) {
