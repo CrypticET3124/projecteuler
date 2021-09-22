@@ -1,7 +1,7 @@
 public class x1 {
 	public static void main(String[] args) {
 		int c = 0;
-		
+
 		for (int x = 0; x < 1000; x++) {
 			if (x % 3 == 0 || x % 5 == 0) {
 				c += x;
