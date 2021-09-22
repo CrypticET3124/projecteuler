@@ -1,10 +1,10 @@
 public class x7 {
     public static void main(String[] args) {
-        int p = 3;
+        int p = 1;
         int n = 0;
 
         boolean re = true;
-        for (int x = 7; re; x += 2) {
+        for (int x = 3; re; x += 2) {
             inner: for (int z = 2; z <= x; z++) {
                 if (z == x) {
                     p++;
