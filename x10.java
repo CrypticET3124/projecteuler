@@ -1,21 +1,16 @@
-public class x7 {
+public class x10 {
     public static void main(String[] args) {
-        int p = 3;
         int n = 0;
 
         boolean re = true;
-        for (int x = 7; re; x += 2) {
-            inner: for (int z = 2; z <= x; z++) {
+        for (int x = 1; x < 2000000; x += 2) {
+            inner: for (int z = 2; z <= x / 2; z++) {
                 if (x % z == 0 && z != x) {
                     break inner;
                 } else if (z == x) {
-                    p++;
-                    System.out.println(p);
+                    
+                    System.out.println(x);
                 }
-            }
-            if (p == 10001) {
-                n = x;
-                re = false;
             }
         }
         System.out.print(n);
