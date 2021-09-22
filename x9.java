@@ -1,6 +1,22 @@
 public class x9 {
     public static void main(String[] args) {
-        
+        int a = 0;
+        int b = 0;
+        int c = 0;
+
+        outer: for (a = 1; a<= 998; a++) {
+            for (b = 1; b <= 998; b++) {
+                for (c = 1; c <= 998; c++) {
+                    if (Math.pow(a, 2) + Math.pow(b, 2) == Math.pow(c, 2) && a + b + c == 1000) {
+                        break outer;
+                    }
+                }
+            }
+        }
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+        System.out.print(a * b * c);
     }
 }
 /*
