@@ -1,59 +1,16 @@
+import java.util.Calendar;
+
 public class x19 {
     public static void main(String[] args) {
-        int D = 3; // sun = 1, sat = 7
+        Calendar cal = Calendar.getInstance();
         int s = 0;
 
         for (int yr = 1901; yr <= 2000; yr++) {
-            for (int m = 1; m <= 12; m++) {
-                int d = 1;
+            for (int m = 0; m <= 11; m++) {
+                cal.set(yr, m, 1);
 
-                if (m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12) { // jan, mar, may, jul, aug,
-                                                                                            // oct, dec
-                    while (d <= 31) {
-                        if (D == 8) {
-                            D = 1;
-                        }
-                        if (D == 1 && d == 1) {
-                            s++;
-                        }
-                        D++;
-                        d++;
-                    }
-                } else if (m == 4 || m == 6 || m == 9 || m == 11) { // apr, jun, sep, nov
-                    while (d <= 30) {
-                        if (D == 8) {
-                            D = 1;
-                        }
-                        if (D == 1 && d == 1) {
-                            s++;
-                        }
-                        D++;
-                        d++;
-                    }
-                } else { // feb
-                    if (yr % 400 == 0) {
-                        while (d <= 29) {
-                            if (D == 8) {
-                                D = 1;
-                            }
-                            if (D == 1 && d == 1) {
-                                s++;
-                            }
-                            D++;
-                            d++;
-                        }
-                    } else {
-                        while (d <= 28) {
-                            if (D == 8) {
-                                D = 1;
-                            }
-                            if (D == 1 && d == 1) {
-                                s++;
-                            }
-                            D++;
-                            d++;
-                        }
-                    }
+                if (cal.get(Calendar.DAY_OF_WEEK) == 1) {
+                    s++;
                 }
             }
         }
