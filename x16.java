@@ -3,7 +3,7 @@ import java.math.BigInteger;
 public class x16 {
 	public static void main(String[] args) {
 		Long e = 1000L;
-		BigInteger r = new BigInteger("1");
+		BigInteger r = BigInteger.valueOf(1);
 
 		while (e > 0L) {
 			r = r.multiply(BigInteger.valueOf(2));
