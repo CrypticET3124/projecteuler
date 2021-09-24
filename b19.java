@@ -7,48 +7,12 @@ public class b19 {
 
         for (int yr = 1901; yr <= 2000; yr++) {
             cal.set(Calendar.YEAR, yr);
-
             for (int m = 1; m <= 12; m++) {
-                int d = 1;
                 cal.set(Calendar.MONTH, m);
                 cal.set(Calendar.DAY_OF_MONTH, 1);
+                // if (cal.get(Calendar.DAY_OF_WEEK) == 1)
 
-                if (m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12) { // jan, mar, may, jul, aug,
-                                                                                            // oct, dec
-                    while (d <= 31) {
-                        cal.add(Calendar.DAY_OF_MONTH, 1);
-                        if (cal.get(Calendar.DAY_OF_WEEK) == 1) {
-                            s++;
-                        }
-                        d++;
-                    }
-                } else if (m == 4 || m == 6 || m == 9 || m == 11) { // apr, jun, sep, nov
-                    while (d <= 30) {
-                        cal.add(Calendar.DAY_OF_MONTH, 1);
-                        if (cal.get(Calendar.DAY_OF_WEEK) == 1) {
-                            s++;
-                        }
-                        d++;
-                    }
-                } else { // feb
-                    if (yr % 400 == 0) {
-                        while (d <= 29) {
-                            cal.add(Calendar.DAY_OF_MONTH, 1);
-                            if (cal.get(Calendar.DAY_OF_WEEK) == 1) {
-                                s++;
-                            }
-                            d++;
-                        }
-                    } else {
-                        while (d <= 28) {
-                            cal.add(Calendar.DAY_OF_MONTH, 1);
-                            if (cal.get(Calendar.DAY_OF_WEEK) == 1) {
-                                s++;
-                            }
-                            d++;
-                        }
-                    }
-                }
+                // if ((new DateTime(year, month, 1)).DayOfWeek == DayOfWeek.Sunday) {
             }
         }
         System.out.println(s);
