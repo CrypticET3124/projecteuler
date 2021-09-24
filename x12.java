@@ -13,7 +13,6 @@ public class x12 {
             if (d >= 500) {
                 re = false;
             }
-            System.out.println(x + "|" + q + "|" + d);
         }
     }
 }
