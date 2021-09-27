@@ -1,6 +1,6 @@
 public class X13 {
     public static void main(String[] args) {
-        
+
     }
 }
 /*

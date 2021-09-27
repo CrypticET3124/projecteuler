@@ -16,15 +16,15 @@ public class X16 {
 
 		Long c = 0L;
 
-        for (Long x = 0L; x < nl; x++) {
-            c += Character.getNumericValue(n.charAt(0));
-            n = n.substring(1);
-        }
-        System.out.println(c);
+		for (Long x = 0L; x < nl; x++) {
+			c += Character.getNumericValue(n.charAt(0));
+			n = n.substring(1);
+		}
+		System.out.println(c);
 	}
 }
 /*
-2^15 = 32768 and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26.
-
-What is the sum of the digits of the number 2^1000?
-*/
+ * 2^15 = 32768 and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26.
+ * 
+ * What is the sum of the digits of the number 2^1000?
+ */
