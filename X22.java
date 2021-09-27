@@ -6,7 +6,7 @@ import java.util.Collections;
 
 public class X22 {
 	public static void main(String[] args) {
-		ArrayList<String> names = new ArrayList<String>();
+		ArrayList<String> names = new ArrayList<>();
 
 		try {
 			Scanner scanner = new Scanner(new File("X22names.txt"));
