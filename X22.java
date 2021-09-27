@@ -15,6 +15,7 @@ public class X22 {
 				names.add(scanner.next().replaceAll("[\"]", ""));
 			}
 			Collections.sort(names);
+			scanner.close();
 		} catch (FileNotFoundException e) {
 			System.out.println("An error occurred.");
 			e.printStackTrace();
