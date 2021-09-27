@@ -1,4 +1,4 @@
-public class x10 {
+public class X10 {
     public static void main(String[] args) {
         Long n = 2L;
 

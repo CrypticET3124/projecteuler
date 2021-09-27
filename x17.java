@@ -1,4 +1,4 @@
-public class x17 {
+public class X17 {
 	public static void main(String[] args) {
 		Long c = 0L;
 		System.out.println("started");

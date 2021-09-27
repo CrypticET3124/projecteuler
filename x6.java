@@ -1,4 +1,4 @@
-public class x6 {
+public class X6 {
     public static void main(String[] args) {
         long s = 0;
         long sq = 0;

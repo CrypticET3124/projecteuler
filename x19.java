@@ -1,6 +1,6 @@
 import java.util.Calendar;
 
-public class x19 {
+public class X19 {
     public static void main(String[] args) {
         Calendar cal = Calendar.getInstance();
         int s = 0;

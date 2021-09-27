@@ -1,4 +1,4 @@
-public class x14 {
+public class X14 {
     public static void main(String[] args) {
         Long maxc = 0L;
         Long maxn = 0L;

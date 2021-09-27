@@ -1,4 +1,4 @@
-public class x5 {
+public class X5 {
     public static void main(String[] args) {
         int n = 0;
         boolean re = true;

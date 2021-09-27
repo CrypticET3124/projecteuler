@@ -1,6 +1,6 @@
 import java.math.BigInteger;
 
-public class x20 {
+public class X20 {
     public static void main(String[] args) {
         BigInteger c = BigInteger.valueOf(1);
 

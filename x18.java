@@ -1,4 +1,4 @@
-public class x18 {
+public class X18 {
     public static void main(String[] args) {
 
     }

@@ -1,4 +1,4 @@
-public class x4 {
+public class X4 {
 	public static void main(String[] args) {
 		int max = 0;
 

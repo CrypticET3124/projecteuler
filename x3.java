@@ -1,4 +1,4 @@
-public class x3 {
+public class X3 {
 	public static void main(String[] args) {
 		long n = 600851475143L;
 

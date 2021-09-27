@@ -1,4 +1,4 @@
-public class x13 {
+public class X13 {
     public static void main(String[] args) {
         
     }

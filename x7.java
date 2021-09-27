@@ -1,4 +1,4 @@
-public class x7 {
+public class X7 {
     public static void main(String[] args) {
         int p = 1;
         int n = 0;

@@ -1,4 +1,4 @@
-public class x12 {
+public class X12 {
     public static void main(String[] args) {
         boolean re = true;
         for (int x = 1; re; x++) {
