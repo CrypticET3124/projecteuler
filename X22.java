@@ -5,24 +5,33 @@ import java.io.FileNotFoundException;
 import java.util.Collections;
 
 public class X22 {
+	// function wordValue that takes in a lowercase string and returns the sum of the value of each letter in the string
+		public static int wordValue(String str) {
+		int sum = 0;
+		for (int i = 0; i < str.length(); i++) {
+			sum += str.charAt(i) - 'a' + 1;
+		}
+		return sum;
+	}
 	public static void main(String[] args) {
 		ArrayList<String> names = new ArrayList<>();
 
-		try {
-			Scanner scanner = new Scanner(new File("X22names.txt"));
-
+		try (Scanner scanner = new Scanner(new File("X22names.txt")).useDelimiter(",")) {
 			while (scanner.hasNext()) {
-				names.add(scanner.next().replaceAll("[\"]", ""));
+				names.add(scanner.next().replace("\"", "").toLowerCase());
 			}
 			Collections.sort(names);
-			scanner.close();
 		} catch (FileNotFoundException e) {
 			System.out.println("An error occurred.");
 			e.printStackTrace();
 		}
-		for (String n : names) {
-			System.out.print(n);
+		// run wordValue on each name in the list and multiply the result by the index of the name in the list
+		// add each of these values together
+		int total = 0;
+		for (int i = 0; i < names.size(); i++) {
+			total += wordValue(names.get(i)) * (i + 1);
 		}
+		System.out.println(total);
 	}
 }
 /*
