@@ -1,6 +1,29 @@
+import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.io.File;
+
 public class X13 {
     public static void main(String[] args) {
+        BigInteger sum = BigInteger.ZERO;
+        List<BigInteger> nums = new ArrayList<>();
 
+        // import X13numbers.txt into nums
+        try (Scanner scanner = new Scanner(new File("X13numbers.tt"));) {
+            while (scanner.hasNextLine()) {
+                nums.add(new BigInteger(scanner.nextLine()));
+            }
+        } catch (Exception e) {
+            System.out.println("Error: " + e);
+        }
+        
+        // sum of all nums
+        for (BigInteger num : nums) {
+            sum = sum.add(num);
+        }
+        // print first 10 digits of sum
+        System.out.println(sum.toString().substring(0, 10));
     }
 }
 /*

@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.Collections;
 
 public class X22 {
@@ -21,10 +20,10 @@ public class X22 {
 				names.add(scanner.next().replace("\"", "").toLowerCase());
 			}
 			Collections.sort(names);
-		} catch (FileNotFoundException e) {
-			System.out.println("An error occurred.");
-			e.printStackTrace();
+		} catch (Exception e) {
+			System.out.println("Error: " + e);
 		}
+		
 		// run wordValue on each name in the list and multiply the result by the index of the name in the list
 		// add each of these values together
 		int total = 0;

@@ -17,7 +17,6 @@ public class X14 {
                     c++;
                 }
             }
-            System.out.println(x + "|" + c);
             if (c > maxc) {
                 maxc = c;
                 maxn = nn;

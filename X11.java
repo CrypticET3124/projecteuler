@@ -1,6 +1,6 @@
 public class X11 {
     public static void main(String[] args) {
-        int[][] n = { { 8, 02, 22, 97, 38, 15, 00, 40, 00, 75, 04, 05, 07, 78, 52, 12, 50, 77, 91, 8 },
+        int[][] grid = { { 8, 02, 22, 97, 38, 15, 00, 40, 00, 75, 04, 05, 07, 78, 52, 12, 50, 77, 91, 8 },
                 { 49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48, 04, 56, 62, 00 },
                 { 81, 49, 31, 73, 55, 79, 14, 29, 93, 71, 40, 67, 53, 88, 30, 03, 49, 13, 36, 65 },
                 { 52, 70, 95, 23, 04, 60, 11, 42, 69, 24, 68, 56, 01, 32, 56, 71, 37, 02, 36, 91 },
@@ -20,7 +20,41 @@ public class X11 {
                 { 20, 69, 36, 41, 72, 30, 23, 88, 34, 62, 99, 69, 82, 67, 59, 85, 74, 04, 36, 16 },
                 { 20, 73, 35, 29, 78, 31, 90, 01, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57, 05, 54 },
                 { 01, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 01, 89, 19, 67, 48 } };
-        System.out.println(n);
+        int max = 0;
+
+        for (int i = 0; i < 20; i++) {
+            for (int j = 0; j < 20; j++) {
+                // horizontal
+                if (j + 3 < 20) {
+                    int product = grid[i][j] * grid[i][j + 1] * grid[i][j + 2] * grid[i][j + 3];
+                    if (product > max) {
+                        max = product;
+                    }
+                }
+                // vertical
+                if (i + 3 < 20) {
+                    int product = grid[i][j] * grid[i + 1][j] * grid[i + 2][j] * grid[i + 3][j];
+                    if (product > max) {
+                        max = product;
+                    }
+                }
+                // right diagonal
+                if (i + 3 < 20 && j + 3 < 20) {
+                    int product = grid[i][j] * grid[i + 1][j + 1] * grid[i + 2][j + 2] * grid[i + 3][j + 3];
+                    if (product > max) {
+                        max = product;
+                    }
+                }
+                // left diagonal
+                if (i + 3 < 20 && j - 3 >= 0) {
+                    int product = grid[i][j] * grid[i + 1][j - 1] * grid[i + 2][j - 2] * grid[i + 3][j - 3];
+                    if (product > max) {
+                        max = product;
+                    }
+                }
+            }
+        }
+        System.out.println(max);
     }
 }
 /*
