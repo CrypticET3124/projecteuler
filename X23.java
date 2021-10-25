@@ -1,6 +1,29 @@
 public class X23 {
+    // class isAbundant that takes an int n as argument and returns true if n is
+    // abundant
+    public static boolean isAbundant(int n) {
+        int sum = 0;
+        for (int i = 1; i <= n / 2; i++) {
+            if (n % i == 0) {
+                sum += i;
+            }
+        }
+        return sum > n;
+    }
+
     public static void main(String[] args) {
-        
+        int total = 0;
+        for (int i = 1; i < 28123; i++) {
+            for (int j = 1; j <= i; j++) {
+                if (isAbundant(j) && isAbundant(i - j)) {
+                    break;
+                }
+                if (j == i) {
+                    total += i;
+                }
+            }
+        }
+        System.out.println(total);
     }
 }
 /*
