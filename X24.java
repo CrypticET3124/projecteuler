@@ -1,6 +1,39 @@
-public class X24 {
-    public static void main(String[] args) {
+import java.util.ArrayList;
 
+public class X24 {
+    public static int[] factoradic(int n) {
+        n--;
+        ArrayList<Integer> f = new ArrayList<>();
+        int i = 1;
+        while (n != 0) {
+            f.add(n % i);
+            n = n / i;
+            i++;
+        }
+        // reverse arraylist and convert to array
+        int[] result = new int[f.size()];
+        for (int j = 0; j < f.size(); j++) {
+            result[j] = f.get(f.size() - j - 1);
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        // ArrayList nums with 0 to 9
+        ArrayList<Integer> nums = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            nums.add(i);
+        }
+
+        int[] f = factoradic(1000000);
+
+        // for i in f get nums[i] and add to string s then remove nums at index i
+        String s = "";
+        for (int i = 0; i < f.length; i++) {
+            s += nums.get(f[i]);
+            nums.remove(f[i]);
+        }
+        System.out.println(s);
     }
 }
 /*
