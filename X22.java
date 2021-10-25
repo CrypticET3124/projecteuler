@@ -4,14 +4,16 @@ import java.io.File;
 import java.util.Collections;
 
 public class X22 {
-	// function wordValue that takes in a lowercase string and returns the sum of the value of each letter in the string
-		public static int wordValue(String str) {
+	// function wordValue that takes in a lowercase string and returns the sum of
+	// the value of each letter in the string
+	public static int wordValue(String str) {
 		int sum = 0;
 		for (int i = 0; i < str.length(); i++) {
 			sum += str.charAt(i) - 'a' + 1;
 		}
 		return sum;
 	}
+
 	public static void main(String[] args) {
 		ArrayList<String> names = new ArrayList<>();
 
@@ -23,8 +25,9 @@ public class X22 {
 		} catch (Exception e) {
 			System.out.println("Error: " + e);
 		}
-		
-		// run wordValue on each name in the list and multiply the result by the index of the name in the list
+
+		// run wordValue on each name in the list and multiply the result by the index
+		// of the name in the list
 		// add each of these values together
 		int total = 0;
 		for (int i = 0; i < names.size(); i++) {
