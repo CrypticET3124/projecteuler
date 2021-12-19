@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class X26 {
     // method recurringLength takes in a double and returns the length of the longest recurring sequence of digits
     public static Double recurringLength(Double n) {
-        // 
+        
     }
 
     public static void main(String[] args) {
