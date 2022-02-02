@@ -1,7 +1,7 @@
-import java.util.ArrayList;
-import java.util.Scanner;
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Scanner;
 
 public class X22 {
 	// function wordValue that takes in a lowercase string and returns the sum of
